@@ -1,9 +1,9 @@
-import coverImage from './assets/cover/cover-image.jpg';
+import coverImage from '../../assets/cover/cover-image.jpg';
 
 function Header(props) {
 
 return (
-    <header className="flex-row space-between px-1">
+    <header className="header">
     <h1>Mecca</h1>
     <img src={coverImage} alt="spacey blue background" />
     {props.children}
