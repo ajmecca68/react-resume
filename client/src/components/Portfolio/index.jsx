@@ -2,8 +2,7 @@ import { useState } from 'react';
 import Project from "../Project";
 
 function Portfolio() {
-
-    const [project] = useState([
+    const [projects] = useState([
         {
             name: 'surfReport',
             description: 'MERN Stack',
@@ -29,18 +28,19 @@ function Portfolio() {
             repo: "https://github.com"
         },
     ]);
-return (
-    <div>
-        <div className="flex-row">
-            {projects.map((project, idx) => (
-                <Project
-                    project={project}
-                    key={"project + idx"}
+
+    return (
+        <div>
+            <div className="flex-row">
+                {projects.map((project, idx) => (
+                    <Project
+                        project={project}
+                        key={project.name + idx}
                     />
-            ))}
+                ))}
+            </div>
         </div>
-    </div>
-);
-};
+    );
+}
 
 export default Portfolio;
